@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #ffffff;
+  --ink: #0a0a0a;
+  --signal: #ff6a00;
+  --line: #ececec;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-signal: var(--signal);
+  --color-line: var(--line);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn-signal {
+  background: var(--signal);
+  color: #000;
+  font-weight: 650;
+}
+.btn-signal:hover {
+  filter: brightness(0.95);
+}
+.btn-signal:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
